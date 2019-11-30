@@ -6,6 +6,7 @@
           Vue Vixens Workshops are for women and people who identify as such.
           Before we start, please tell us whether you identify as a woman
         </h1>
+        <tito-button event="vuevixens/test"></tito-button>
         <div class="actions">
           <v-btn color="secondary darken-2" dark @click="genderQuestionAnswered = true">Yes</v-btn>
           <v-btn color="secondary darken-2" dark @click="proceedToSorryMessage">No</v-btn>
@@ -17,7 +18,7 @@
         <v-flex xs12>
           <h1 class="display-2 text-xs-center">Event registration form</h1>
           <v-form
-            action="https://vuevixens.us7.list-manage.com/subscribe/post?u=bb4724549551e6cf7bb5e3165&amp;id=ecd2dfeb93"
+            action="https://api.tito.io/v3/vuevixens/test"
             method="post"
             class="submit-form"
             v-model="valid"
@@ -26,6 +27,7 @@
             <v-text-field name="FNAME" label="Full name *" v-model="name" :rules="nameRules"></v-text-field>
             <v-text-field name="AFFIL" label="Affiliation"></v-text-field>
             <v-text-field name="FOOD" label="Food preferences (if any)"></v-text-field>
+            <input type="text" name="token" class="hidden-field" value="secret_test_xzhrZBydHngns61tfiY5">
             <input type="text" name="CONF" class="hidden-field" :value="formEvent">
             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
             <div class="hidden-field">
